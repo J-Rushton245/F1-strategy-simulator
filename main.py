@@ -18,7 +18,7 @@ session = fastf1.get_session(year, track, session_type)
 session.load()
 total_laps = session.total_laps
 rand_fact = False #adds factor of randomisation to laptimes (to remove perfect consistency)
-sim_option = 3 # 1:Fastest Clean Air Strategy 2:Race Sim, all drivers predetermined strat 3:Monte Carlo sims
+sim_option = 3 # 1:Fastest Clean Air Strategy 2:Clean air race sim, all drivers predetermined strat 3:Race sim including traffic + dirty air
 
 #####HARDCODED VALUES#####
 pit_loss = 24 #assumed pit stop time (temporary for Sazuka) - get standard pit losses for each track
@@ -27,7 +27,7 @@ start_fuel = 110 #assumed initial fuel load (kg)
 fuel_burn = 1.7 #kg/lap (estimated) - for race sim fuel estimation
 fuel_loss = 0.03 #fuel loss (s/kg)
 max_dirty_air = 0.35 #maximum dirty air loss (s)
-dirty_air_effect = 2 #time behind car ahead in which dirty air impacts laptime
+dirty_air_effect = 2 #time behind car ahead in which dirty air impacts laptime (s)
 
 logging.disable(logging.INFO) #disables logging data while keeping warnings
 fastf1.plotting.setup_mpl(mpl_timedelta_support=True, color_scheme="fastf1") #allows matplotlib to work with fastf1 colour 
@@ -224,7 +224,7 @@ def race_sim(baselines, team_deg, global_a, global_b, compounds):
             #print(driver.name + " " + str(driver.race_time))
         race_output(drivers)
 
-    if sim_option == 3: #race simulations (monte carlo), including traffic, dirty air and track events
+    if sim_option == 3: #race simulations (next improvement: monte carlo), including traffic, dirty air and track events
         #iterate monte carlo sims here
 
         grid = sorted(drivers.values(),key=lambda x: x.position)
