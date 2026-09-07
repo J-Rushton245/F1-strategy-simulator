@@ -1,2 +1,3 @@
 2026 Japanese Strategy Predictor (left) compared to real life pit laps (right):
-<img width="938" height="412" alt="image" src="https://github.com/user-attachments/assets/1d17fd7d-8eef-492b-83c0-1c3c94cf53c1" />
+<img width="948" height="410" alt="image" src="https://github.com/user-attachments/assets/78cc8d0a-4c52-4e89-a49c-368e31fa01b5" />
+
