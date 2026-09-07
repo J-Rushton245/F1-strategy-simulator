@@ -54,7 +54,7 @@ class Driver:
         return lap
 
     def get_dirty_air(self, gap): #calculates dirty air loss to car ahead
-        if 0 <= gap <= 2: #assuming dirty air impacts up to 2s behind
+        if 0 <= gap <= dirty_air_effect: 
             loss = max_dirty_air * (1 - gap/2)
         else:
             loss = 0
