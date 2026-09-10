@@ -1,4 +1,4 @@
-The current project only predicts optimal strategies in clean-air running. However further improvements are directed towards adding Monte Carlo simulations alongside race models with traffic, dirty air and overtaking to find optimal strategy in realistic race conditions.
+The current project only predicts optimal strategies in clean-air running. However further improvements are directed towards adding Monte Carlo simulations alongside race models with traffic, dirty air and overtaking to find optimal strategy in realistic race conditions including stochastic race events.
 Further improvements also aim to improve accuracy across tracks, as well as attempting to remove hardcoded values such as fuel, dirty air effect and overtaking delta.
 
 Predicted optimal pit laps and pit windows for 2026 Japanese GP (left) compared to actual pit laps (right):
